@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# installing nginx service
+echo 'installing nginx service...'
+sudo apt-get update -y -qq && sudo apt-get install nginx -y
+
+# starting nginx service
+echo 'starting nginx service...'
+sudo service nginx start
+
+# allowing nginx on firewall
+echo 'allowing nginx on firewall...'
+sudo ufw allow 'Nginx HTTP'
+
+# Give the user ownership to website files for easy editing
+echo 'Give the user ownership to website files for easy editing...'
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+
+# Creating new index
+echo 'Creating new index...'
+echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+
+# Restarting nginx
+echo 'Restarting nginx...'
+sudo service nginx restart
