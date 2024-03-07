@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# what’s keeping your Ubuntu container’s Nginx installation from listening on port 8?
+sudo apt update
+sudo apt --yes --force-yes install nginx
+service nginx start
