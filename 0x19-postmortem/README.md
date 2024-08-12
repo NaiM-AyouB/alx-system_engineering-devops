@@ -4,7 +4,7 @@
 
 ### Issue Summary
 
-- **Duration**: April 13, 2024, 10:00 PM - April 14, 2024, 2:00 AM (PST)
+- **Duration**: Project will start Aug 12, 2024 4:00 AM, must end by Aug 19, 2024 4:00 AM
 - **Impact**: XCLR.io, an education platform, crashed, affecting 95% of users.
 - **Root Cause**: A social engineering attack via USB baiting compromised server security.
 
